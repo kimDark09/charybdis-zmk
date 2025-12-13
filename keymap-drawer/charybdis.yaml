@@ -32,7 +32,7 @@ layers:
   - {t: F, h: Sft+F}
   - {t: G, h: Sft+G}
   - {t: H, h: Sft+H}
-  - {t: J, h: Sft+J}
+  - {t: J, h: Scroll}
   - {t: K, h: Sft+K}
   - {t: L, h: Sft+L}
   - {t: ;, h: ':'}
@@ -374,7 +374,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
