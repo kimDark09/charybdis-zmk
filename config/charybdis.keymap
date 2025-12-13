@@ -182,7 +182,7 @@
         mo_to: mo_to {
             compatible = "zmk,behavior-hold-tap";
             label = "MO_TO";
-            bindings = <&mo>, <&to>;
+            bindings = <&mo>, <&tog>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -224,7 +224,7 @@
 &kp F12             &kp F1      &kp F2         &kp F3              &kp F4         &kp F5          &kp F6         &kp F7         &kp F8    &kp F9     &kp F10  &kp F11
 &tab_dance_esc_tab  &kp F2      &kp F12        &kp LS(N3)          &kp LS(N4)     &kp LS(LBKT)    &kp PAGE_UP    &kp HOME       &kp UP    &kp END    &none    &kp BSPC
 &kp LEFT_CONTROL    &trans      &kp LS(LG(S))  &kp LC(LEFT_SHIFT)  &kp LS(N8)     &none           &kp PAGE_DOWN  &kp LEFT       &kp DOWN  &kp RIGHT  &trans   &kp RET
-&kp LEFT_SHIFT      &kp LS(N9)  &kp LS(N0)     &kp LS(MINUS)       &kp LS(EQUAL)  &none           &none          &trans         &trans    &trans     &none    &trans
+&kp LEFT_SHIFT      &kp LS(N9)  &kp LS(N0)     &kp LS(MINUS)       &kp LS(EQUAL)  &none           &none          &trans         &trans    &trans     &none    &studio_unlock
                                                &trans              &trans         &trans          &trans         &kp BACKSPACE
                                                                    &trans         &trans          &none
             >;
