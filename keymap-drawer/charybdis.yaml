@@ -77,9 +77,9 @@ layers:
   - '5'
   - '6'
   - '7'
+  - '7'
   - '8'
   - '9'
-  - '0'
   - '-'
   - $$mdi:backspace-reverse-outline$$
   - LEFT CONTROL
@@ -89,10 +89,10 @@ layers:
   - '8'
   - ''
   - '4'
+  - '4'
   - '5'
   - '6'
-  - '['
-  - ']'
+  - {t: ']', h: '['}
   - RET
   - $$mdi:apple-keyboard-shift$$
   - '9'
@@ -101,16 +101,16 @@ layers:
   - '='
   - ''
   - '1'
+  - '1'
   - '2'
   - '3'
-  - F11
   - \
   - $$mdi:apple-keyboard-shift$$
   - {t: Base, h: Pointer, type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - '0'
   - .
+  - '0'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - $$mdi:keyboard-space$$
