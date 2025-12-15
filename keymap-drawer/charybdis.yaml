@@ -54,8 +54,8 @@ layers:
   - {t: Numeral/Function, h: toggle}
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - {t: '$$mdi:keyboard-space$$', h: Numeral/Function}
-  - {t: '$$mdi:keyboard-space$$', h: Symbol}
-  - {t: '$$mdi:keyboard-esc$$', h: Pointer}
+  - {t: '$$mdi:keyboard-space$$', h: Scroll}
+  - {t: '$$mdi:keyboard-esc$$', h: Symbol}
   - '&mkp LCLK'
   Numeral/Function:
   - '~'
@@ -106,7 +106,7 @@ layers:
   - '3'
   - \
   - $$mdi:apple-keyboard-shift$$
-  - {t: Base, h: Pointer, type: held}
+  - {t: Numeral/Function, h: toggle, type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - .
@@ -157,19 +157,19 @@ layers:
   - Sft+-
   - Sft+=
   - ''
-  - ''
+  - '&mkp MCLK'
+  - '&mkp LCLK'
+  - '&mkp RCLK'
+  - '&mkp MB4'
+  - Ctl+W
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - ''
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: '$$mdi:backspace$$', type: backspace}
   - {type: held}
-  - {t: ▽, type: trans}
   - ''
   Navigation:
   - F12
@@ -214,11 +214,11 @@ layers:
   - Sft+-
   - Sft+=
   - ''
-  - ''
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - ''
+  - '&mkp MCLK'
+  - '&mkp LCLK'
+  - '&mkp RCLK'
+  - '&mkp MB4'
+  - Ctl+W
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -340,7 +340,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: Base, h: toggle}
-  - {type: held}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   Scroll:
   - {t: ▽, type: trans}
