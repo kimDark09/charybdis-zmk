@@ -51,7 +51,7 @@ layers:
   - $$mdi:apple-keyboard-shift$$
   - {t: Numeral/Function, h: Numeral/Function}
   - {t: '$$mdi:keyboard-tab$$', h: LEFT ALT}
-  - {t: Numeral/Function, h: toggle}
+  - {t: Numeral/Function, h: Sniper}
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - {t: '$$mdi:keyboard-space$$', h: Numeral/Function}
   - {t: '$$mdi:keyboard-space$$', h: Scroll}
@@ -87,19 +87,19 @@ layers:
   - '*'
   - '%'
   - _
-  - ''
-  - '4'
+  - '-'
+  - {t: ▽, type: trans}
   - '4'
   - '5'
   - '6'
-  - {t: ']', h: '['}
+  - {t: '[', h: ']'}
   - RET
   - $$mdi:apple-keyboard-shift$$
   - '='
   - '0'
-  - '-'
+  - {t: (, h: )}
   - '='
-  - ''
+  - +
   - '0'
   - '1'
   - '2'
