@@ -27,14 +27,14 @@ layers:
   - {t: '$$mdi:backspace$$', type: backspace}
   - LEFT CONTROL
   - {t: A, h: Sft+A}
-  - {t: S, h: Sft+S}
-  - {t: D, h: Sft+D}
-  - {t: F, h: Sft+F}
+  - {t: S, h: Sft+LEFT ALT}
+  - {t: D, h: Sft+LEFT SHIFT}
+  - {t: F, h: LEFT CONTROL}
   - {t: G, h: Sft+G}
-  - {t: H, h: Sft+H}
-  - {t: J, h: Scroll}
-  - {t: K, h: Sft+K}
-  - {t: L, h: Sft+L}
+  - {t: H, h: Scroll}
+  - {t: J, h: RIGHT CONTROL}
+  - {t: K, h: RIGHT SHIFT}
+  - {t: L, h: RIGHT ALT}
   - {t: ;, h: ':'}
   - {t: '$$mdi:keyboard-return$$', h: ''''}
   - LEFT SHIFT
@@ -50,7 +50,7 @@ layers:
   - {t: /, h: '?'}
   - $$mdi:apple-keyboard-shift$$
   - {t: Numeral/Function, h: Numeral/Function}
-  - {t: LEFT ALT, h: '$$mdi:keyboard-tab$$'}
+  - {t: '$$mdi:keyboard-tab$$', h: LEFT ALT}
   - {t: Numeral/Function, h: toggle}
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - {t: '$$mdi:keyboard-space$$', h: Numeral/Function}
@@ -83,10 +83,10 @@ layers:
   - '-'
   - $$mdi:backspace-reverse-outline$$
   - LEFT CONTROL
-  - '5'
-  - '6'
-  - '7'
-  - '8'
+  - +
+  - '*'
+  - '%'
+  - _
   - ''
   - '4'
   - '4'
@@ -95,12 +95,12 @@ layers:
   - {t: ']', h: '['}
   - RET
   - $$mdi:apple-keyboard-shift$$
-  - '9'
+  - '='
   - '0'
   - '-'
   - '='
   - ''
-  - '1'
+  - '0'
   - '1'
   - '2'
   - '3'
@@ -130,9 +130,9 @@ layers:
   - '&tab_dance_esc_tab'
   - F2
   - F12
-  - Sft+3
-  - Sft+4
-  - Sft+[
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - PAGE UP
   - HOME
   - $$mdi:arrow-up-bold$$
@@ -142,21 +142,21 @@ layers:
   - LEFT CONTROL
   - {t: ▽, type: trans}
   - Sft+Gui+S
-  - Ctl+LEFT SHIFT
-  - Sft+8
-  - ''
-  - PAGE DOWN
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: PAGE DOWN, h: Scroll}
   - $$mdi:arrow-left-bold$$
   - $$mdi:arrow-down-bold$$
   - $$mdi:arrow-right-bold$$
   - {t: ▽, type: trans}
   - RET
   - LEFT SHIFT
-  - Sft+9
-  - Sft+0
-  - Sft+-
-  - Sft+=
-  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - '&mkp MCLK'
   - '&mkp LCLK'
   - '&mkp RCLK'
@@ -170,7 +170,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {type: held}
-  - ''
+  - {t: ▽, type: trans}
   Navigation:
   - F12
   - F1
@@ -373,8 +373,8 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   - {type: held}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
