@@ -1,8 +1,8 @@
 #include <dt-bindings/zmk/mouse.h>
 #include <behaviors/mouse_keys.dtsi>
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/pointing.h>
 
 #define BASE 0
 #define NUFU 1
@@ -13,9 +13,7 @@
 #define SCR 6
 #define SNI 7
 
-&sl {
-  release-after-ms = <250>;
-};
+&sl { release-after-ms = <250>; };
 
 &mt {
     tapping-term-ms = <200>;
@@ -23,7 +21,6 @@
 };
 
 / {
-
     combos {
         compatible = "zmk,combos";
 
@@ -188,55 +185,54 @@
             tapping-term-ms = <200>;
             flavor = "balanced";
         };
-
     };
-
 
     keymap {
         compatible = "zmk,keymap";
+
         Base {
             label = "Base";
             bindings = <
-              &kp GRAVE           &kp N1         &kp N2         &kp N3         &kp N4              &kp N5           &kp N6         &kp N7         &kp N8                 &kp N9             &kp N0                &kp BACKSPACE
-              &tab_dance_esc_tab  &hold LS(Q) Q  &hold LS(W) W  &hold LS(E) E  &hold LS(R) R       &hold LS(T) T    &hold LS(Y) Y  &hold LS(U) U  &hold LS(I) I          &hold LS(O) O      &hold LS(P) P         &kp BACKSPACE
-              &kp LEFT_CONTROL    &hold LS(A) A  &hold LS(S) S  &hold LS(D) D  &hold LS(F) F       &hold LS(G) G    &hold LS(H) H  &lt 6 J  &hold LS(K) K          &hold LS(L) L      &hold COLON SEMI      &hold SINGLE_QUOTE ENTER
-              &kp LEFT_SHIFT      &hold LS(Z) Z  &hold LS(X) X  &hold LS(C) C  &hold LS(V) V       &hold LS(B) B    &hold B N      &hold LS(M) M  &hold LS(COMMA) COMMA  &hold LS(DOT) DOT  &hold QUESTION SLASH  &kp RSHFT
-                                                                &mo_to 1 1     &hold TAB LEFT_ALT  &tog 1           &kp ENTER      &lt 1 SPACE
-                                                                               &lt 6 SPACE         &lt 2 ESC        &mkp LCLK
+&kp GRAVE           &kp N1         &kp N2                &kp N3                  &kp N4                &kp N5           &kp N6         &kp N7                 &kp N8                 &kp N9             &kp N0                &kp BACKSPACE
+&tab_dance_esc_tab  &hold LS(Q) Q  &hold LS(W) W         &hold LS(E) E           &hold LS(R) R         &hold LS(T) T    &hold LS(Y) Y  &hold LS(U) U          &hold LS(I) I          &hold LS(O) O      &hold LS(P) P         &kp BACKSPACE
+&kp LEFT_CONTROL    &hold LS(A) A  &hold LS(LEFT_ALT) S  &hold LS(LEFT_SHIFT) D  &hold LEFT_CONTROL F  &hold LS(G) G    &lt 6 H        &hold RIGHT_CONTROL J  &hold RIGHT_SHIFT K    &hold RIGHT_ALT L  &hold COLON SEMI      &hold SINGLE_QUOTE ENTER
+&kp LEFT_SHIFT      &hold LS(Z) Z  &hold LS(X) X         &hold LS(C) C           &hold LS(V) V         &hold LS(B) B    &hold B N      &hold LS(M) M          &hold LS(COMMA) COMMA  &hold LS(DOT) DOT  &hold QUESTION SLASH  &kp RSHFT
+                                                         &mo_to 1 1              &hold LEFT_ALT TAB    &tog 1           &kp ENTER      &lt 1 SPACE
+                                                                                 &lt 6 SPACE           &lt 2 ESC        &mkp LCLK
             >;
         };
 
         NuFu {
             label = "Numeral/Function";
             bindings = <
-&kp TILDE         &kp EXCLAMATION  &kp HASH      &kp DOLLAR      &kp DOLLAR    &kp PERCENT    &kp CARET  &kp AMPERSAND  &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp UNDERSCORE
-&kp N1            &kp N2           &kp N3        &kp N4          &kp N5        &kp N6         &kp N7     &kp N7         &kp N8        &kp N9                &kp MINUS              &kp DEL
-&kp LEFT_CONTROL  &kp NUMBER_5     &kp NUMBER_6  &kp NUMBER_7    &kp NUMBER_8  &none          &kp N4     &kp N4         &kp N5        &kp N6                &hold LBKT RBKT        &kp RET
-&kp LSHFT         &kp NUMBER_9     &kp NUMBER_0  &kp MINUS       &kp EQUAL     &none          &kp N1     &kp N1         &kp N2        &kp N3                &kp BSLH               &kp RSHFT
-                                                 &tog 1          &trans        &trans         &kp DOT     &kp N0
-                                                                 &trans        &trans         &kp SPACE
+&kp TILDE         &kp EXCLAMATION  &kp HASH      &kp DOLLAR   &kp DOLLAR      &kp PERCENT    &kp CARET  &kp AMPERSAND  &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp UNDERSCORE
+&kp N1            &kp N2           &kp N3        &kp N4       &kp N5          &kp N6         &kp N7     &kp N7         &kp N8        &kp N9                &kp MINUS              &kp DEL
+&kp LEFT_CONTROL  &kp PLUS         &kp ASTERISK  &kp PERCENT  &kp UNDERSCORE  &none          &kp N4     &kp N4         &kp N5        &kp N6                &hold LBKT RBKT        &kp RET
+&kp LSHFT         &kp EQUAL        &kp NUMBER_0  &kp MINUS    &kp EQUAL       &none          &kp N0     &kp N1         &kp N2        &kp N3                &kp BSLH               &kp RSHFT
+                                                 &tog 1       &trans          &trans         &kp DOT    &kp N0
+                                                              &trans          &trans         &kp SPACE
             >;
         };
 
         Symbol {
             label = "Symbol";
             bindings = <
-&kp F12             &kp F1      &kp F2         &kp F3              &kp F4         &kp F5          &kp F6         &kp F7         &kp F8    &kp F9     &kp F10  &kp F11
-&tab_dance_esc_tab  &kp F2      &kp F12        &kp LS(N3)          &kp LS(N4)     &kp LS(LBKT)    &kp PAGE_UP    &kp HOME       &kp UP    &kp END    &none    &kp BSPC
-&kp LEFT_CONTROL    &trans      &kp LS(LG(S))  &kp LC(LEFT_SHIFT)  &kp LS(N8)     &none           &kp PAGE_DOWN  &kp LEFT       &kp DOWN  &kp RIGHT  &trans   &kp RET
-&kp LEFT_SHIFT      &kp LS(N9)  &kp LS(N0)     &kp LS(MINUS)       &kp LS(EQUAL)  &none           &mkp MCLK      &mkp LCLK      &mkp RCLK &mkp MB4   &kp LC(W) &trans
-                                               &trans              &trans         &trans          &trans         &trans
-                                                                   &trans         &trans          &none
+&kp F12             &kp F1  &kp F2         &kp F3  &kp F4  &kp F5    &kp F6           &kp F7     &kp F8     &kp F9     &kp F10    &kp F11
+&tab_dance_esc_tab  &kp F2  &kp F12        &trans  &trans  &trans    &kp PAGE_UP      &kp HOME   &kp UP     &kp END    &none      &kp BSPC
+&kp LEFT_CONTROL    &trans  &kp LS(LG(S))  &trans  &trans  &trans    &lt 6 PAGE_DOWN  &kp LEFT   &kp DOWN   &kp RIGHT  &trans     &kp RET
+&kp LEFT_SHIFT      &trans  &trans         &trans  &trans  &trans    &mkp MCLK        &mkp LCLK  &mkp RCLK  &mkp MB4   &kp LC(W)  &trans
+                                           &trans  &trans  &trans    &trans           &trans
+                                                   &trans  &trans    &trans
             >;
         };
 
         Navigation {
             label = "Navigation";
             bindings = <
-&kp F12             &kp F1      &kp F2         &kp F3              &kp F4         &kp F5          &kp F6         &kp F7         &kp F8    &kp F9     &kp F10  &kp F11
-&tab_dance_esc_tab  &kp F2      &kp F12        &kp LS(N3)          &kp LS(N4)     &kp LS(LBKT)    &kp PAGE_UP    &kp HOME       &kp UP    &kp END    &none    &kp BSPC
-&kp LEFT_CONTROL    &trans      &kp LS(LG(S))  &kp LC(LEFT_SHIFT)  &kp LS(N8)     &none           &kp PAGE_DOWN  &kp LEFT       &kp DOWN  &kp RIGHT  &trans   &kp RET
-&kp LEFT_SHIFT      &kp LS(N9)  &kp LS(N0)     &kp LS(MINUS)       &kp LS(EQUAL)  &none           &mkp MCLK      &mkp LCLK      &mkp RCLK &mkp MB4   &kp LC(W) &trans
+&kp F12             &kp F1      &kp F2         &kp F3              &kp F4         &kp F5          &kp F6         &kp F7         &kp F8     &kp F9     &kp F10    &kp F11
+&tab_dance_esc_tab  &kp F2      &kp F12        &kp LS(N3)          &kp LS(N4)     &kp LS(LBKT)    &kp PAGE_UP    &kp HOME       &kp UP     &kp END    &none      &kp BSPC
+&kp LEFT_CONTROL    &trans      &kp LS(LG(S))  &kp LC(LEFT_SHIFT)  &kp LS(N8)     &none           &kp PAGE_DOWN  &kp LEFT       &kp DOWN   &kp RIGHT  &trans     &kp RET
+&kp LEFT_SHIFT      &kp LS(N9)  &kp LS(N0)     &kp LS(MINUS)       &kp LS(EQUAL)  &none           &mkp MCLK      &mkp LCLK      &mkp RCLK  &mkp MB4   &kp LC(W)  &trans
                                                &trans              &trans         &trans          &trans         &kp BACKSPACE
                                                                    &trans         &trans          &none
             >;
