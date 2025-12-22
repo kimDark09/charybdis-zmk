@@ -30,9 +30,9 @@ layers:
   - {t: S, h: Sft+LEFT ALT}
   - {t: D, h: Sft+LEFT SHIFT}
   - {t: F, h: LEFT CONTROL}
-  - {t: G, h: Sft+G}
+  - {t: G, h: Symbol}
   - {t: H, h: Scroll}
-  - {t: J, h: RIGHT CONTROL}
+  - {t: J, h: LEFT CONTROL}
   - {t: K, h: RIGHT SHIFT}
   - {t: L, h: RIGHT ALT}
   - {t: ;, h: ':'}
@@ -51,7 +51,7 @@ layers:
   - $$mdi:apple-keyboard-shift$$
   - {t: Numeral/Function, h: Numeral/Function}
   - {t: '$$mdi:keyboard-tab$$', h: LEFT ALT}
-  - {t: Numeral/Function, h: Sniper}
+  - {t: Symbol, h: Symbol}
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - {t: '$$mdi:keyboard-space$$', h: Numeral/Function}
   - {t: '$$mdi:keyboard-space$$', h: Scroll}
@@ -144,7 +144,7 @@ layers:
   - Sft+Gui+S
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {type: held}
   - {t: PAGE DOWN, h: Scroll}
   - $$mdi:arrow-left-bold$$
   - $$mdi:arrow-down-bold$$
@@ -169,7 +169,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {type: held}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   Navigation:
   - F12
